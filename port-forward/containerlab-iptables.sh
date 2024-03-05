@@ -48,3 +48,10 @@ sudo iptables -A FORWARD -p tcp -d 172.20.20.9 --dport 22 -j ACCEPT
 
 # sudo iptables -t nat --line-numbers -L PREROUTING
 # sudo iptables --line-numbers -L FORWARD
+
+# This line needs to be uncommented as well:
+# netadmin@srv-containerlab-02:/home/netadmin $ cat /etc/sysctl.conf
+
+
+# Uncomment the next line to enable packet forwarding for IPv4
+#net.ipv4.ip_forward=1
